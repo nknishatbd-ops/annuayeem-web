@@ -21,8 +21,7 @@
     <div class="max-w-6xl mx-auto p-4 md:py-12 flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2 space-y-4">
             <img id="main-img" src="" class="w-full rounded-2xl border border-gray-800 shadow-2xl">
-            <div id="thumb-container" class="grid grid-cols-4 gap-2">
-                </div>
+            <div id="thumb-container" class="grid grid-cols-4 gap-2"></div>
         </div>
 
         <div class="md:w-1/2 space-y-6">
@@ -30,11 +29,11 @@
             <p id="prod-price" class="text-4xl font-bold gold-text">৳ ০০০</p>
             
             <div class="border-y border-gray-800 py-4 space-y-2">
-                <p class="text-gray-400">ব্যস্ততার মাঝেও আপনার আভিজাত্য বজায় রাখতে আন-নুয়াইম এর প্রিমিয়াম এই পাঞ্জাবিটি সেরা পছন্দ।</p>
+                <p class="text-gray-400">প্রিমিয়াম কোয়ালিটির এই পাঞ্জাবিটি আপনার আভিজাত্য প্রকাশে অনন্য।</p>
                 <ul class="text-sm space-y-1 text-gray-300">
-                    <li>✓ প্রিমিয়াম ফেব্রিক</li>
-                    <li>✓ আরামদায়ক ফিটিং</li>
-                    <li>✓ নিখুঁত কাজ</li>
+                    <li>✓ ১০০% এক্সপোর্ট কোয়ালিটি কটন</li>
+                    <li>✓ আরামদায়ক কাটিং ও ফিটিং</li>
+                    <li>✓ উন্নত মানের সূচিশৈলী</li>
                 </ul>
             </div>
 
@@ -53,14 +52,28 @@
     </div>
 
     <script>
-        // ২০টি পাঞ্জাবির আলাদা আলাদা ডাটাবেস
+        // এখানে ২০টি পাঞ্জাবির আলাদা ডাটা সেট করা হয়েছে
         const productsData = {
             "1": { name: "এম্ব্রয়ডারি প্রিমিয়াম পাঞ্জাবি", price: "৯৯৯", img: "https://via.placeholder.com/600x800/1e293b/d4af37?text=Design+1" },
-            "2": { name: "রয়্যাল ব্ল্যাক পাঞ্জাবি", price: "১,২৯৯", img: "https://via.placeholder.com/600x800/000000/d4af37?text=Royal+Black" },
-            "3": { name: "সাদা প্রিমিয়াম কটন", price: "১,১০০", img: "https://via.placeholder.com/600x800/ffffff/000000?text=White+Cotton" },
-            "4": { name: "ক্লাসিক নেভি ব্লু", price: "৯৫০", img: "https://via.placeholder.com/600x800/000080/ffffff?text=Navy+Blue" },
-            "5": { name: "গোল্ডেন সিল্ক এডিশন", price: "২,৫০০", img: "https://via.placeholder.com/600x800/d4af37/000000?text=Golden+Silk" }
-            // আপনি এভাবে ২০ পর্যন্ত আইডি বাড়াতে পারবেন
+            "2": { name: "রয়্যাল ব্ল্যাক পাঞ্জাবি", price: "১,২৯৯", img: "https://via.placeholder.com/600x800/000000/d4af37?text=Design+2" },
+            "3": { name: "সাদা প্রিমিয়াম কটন", price: "১,১০০", img: "https://via.placeholder.com/600x800/ffffff/000000?text=Design+3" },
+            "4": { name: "ক্লাসিক নেভি ব্লু", price: "৯৫০", img: "https://via.placeholder.com/600x800/000080/ffffff?text=Design+4" },
+            "5": { name: "গোল্ডেন সিল্ক এডিশন", price: "২,৫০০", img: "https://via.placeholder.com/600x800/d4af37/000000?text=Design+5" },
+            "6": { name: "মেরুন লাক্সারি কালেকশন", price: "১,৪০০", img: "https://via.placeholder.com/600x800/800000/ffffff?text=Design+6" },
+            "7": { name: "অফ-হোয়াইট লিনেন", price: "১,২০০", img: "https://via.placeholder.com/600x800/f5f5dc/000000?text=Design+7" },
+            "8": { name: "ডিজাইনার খাদি পাঞ্জাবি", price: "১,৩৫০", img: "https://via.placeholder.com/600x800/c2b280/000000?text=Design+8" },
+            "9": { name: "বর্ডার প্রিন্ট স্পেশাল", price: "১,০৫০", img: "https://via.placeholder.com/600x800/2f4f4f/ffffff?text=Design+9" },
+            "10": { name: "ম্যাট ফিনিশ পাঞ্জাবি", price: "১,১৫০", img: "https://via.placeholder.com/600x800/4b5320/ffffff?text=Design+10" },
+            "11": { name: "এলিগেন্ট গ্রে পাঞ্জাবি", price: "১,১০০", img: "https://via.placeholder.com/600x800/808080/ffffff?text=Design+11" },
+            "12": { name: "পার্টি ওয়ের গোল্ড", price: "৩,২০০", img: "https://via.placeholder.com/600x800/ffd700/000000?text=Design+12" },
+            "13": { name: "ক্যাজুয়াল কটন মিক্স", price: "৮৯৯", img: "https://via.placeholder.com/600x800/696969/ffffff?text=Design+13" },
+            "14": { name: "প্রিন্টেড নীল পাঞ্জাবি", price: "১,৬০০", img: "https://via.placeholder.com/600x800/0000ff/ffffff?text=Design+14" },
+            "15": { name: "সফট সিল্ক কালেকশন", price: "২,১০০", img: "https://via.placeholder.com/600x800/da70d6/ffffff?text=Design+15" },
+            "16": { name: "শাহি ভেলভেট পাঞ্জাবি", price: "৪,৫০০", img: "https://via.placeholder.com/600x800/4a0e0e/ffffff?text=Design+16" },
+            "17": { name: "বুটিক স্টাইল পাঞ্জাবি", price: "১,৯৫০", img: "https://via.placeholder.com/600x800/ff69b4/ffffff?text=Design+17" },
+            "18": { name: "সলিড মাস্টার্ড পাঞ্জাবি", price: "১,০৫০", img: "https://via.placeholder.com/600x800/ffdb58/000000?text=Design+18" },
+            "19": { name: "সিলভার টাচ পাঞ্জাবি", price: "২,৪০০", img: "https://via.placeholder.com/600x800/c0c0c0/000000?text=Design+19" },
+            "20": { name: "ব্ল্যাক এন্ড গোল্ড এডিশন", price: "৩,৫০০", img: "https://via.placeholder.com/600x800/1a1a1a/d4af37?text=Design+20" }
         };
 
         const urlParams = new URLSearchParams(window.location.search);
@@ -71,15 +84,14 @@
             document.getElementById('prod-name').innerText = product.name;
             document.getElementById('prod-price').innerText = "৳ " + product.price;
             document.getElementById('main-img').src = product.img;
-            document.getElementById('wa-btn').href = "https://wa.me/8801XXXXXXXXX?text=আমি এই পাঞ্জাবিটি কিনতে চাই: " + product.name;
+            document.getElementById('wa-btn').href = "https://wa.me/8801XXXXXXXXX?text=সালাম, আমি এই পাঞ্জাবিটি অর্ডার করতে চাই: " + product.name + " (৳" + product.price + ")";
             
-            // থাম্বনেইল ছবি সেট করা
             const thumbContainer = document.getElementById('thumb-container');
             for(let i=0; i<3; i++) {
                 thumbContainer.innerHTML += `<img onclick="document.getElementById('main-img').src=this.src" src="${product.img}" class="rounded-lg cursor-pointer border border-gray-700 hover:border-yellow-500">`;
             }
         } else {
-            document.body.innerHTML = "<h1 class='text-center mt-20'>প্রোডাক্ট পাওয়া যায়নি! <a href='index.html' class='text-blue-500'>হোমে ফিরে যান</a></h1>";
+            document.body.innerHTML = "<div class='text-center mt-20'><h1 class='text-2xl mb-4 text-red-500'>প্রোডাক্টটি খুঁজে পাওয়া যায়নি!</h1><a href='index.html' class='gold-text font-bold underline'>হোমে ফিরে যান</a></div>";
         }
     </script>
 
