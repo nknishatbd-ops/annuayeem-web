@@ -3,56 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>An-Nuayeem | Premium Panjabi Collection</title>
+    <title>An-Nuayeem | Premium Panjabi</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Hind Siliguri', sans-serif; background-color: #0b0f1a; color: #f8fafc; }
+        body { font-family: sans-serif; background-color: #0b0f1a; color: #f8fafc; }
         .gold-text { color: #d4af37; }
-        .gold-bg { background-color: #d4af37; }
         .product-card { background: #161b2a; border: 1px solid #1e293b; transition: 0.3s; cursor: pointer; }
-        .product-card:hover { border-color: #d4af37; transform: translateY(-5px); }
+        .product-card:hover { border-color: #d4af37; }
     </style>
 </head>
 <body>
-
-    <header class="sticky top-0 z-50 bg-[#0b0f1a]/90 backdrop-blur-md border-b border-gray-800 p-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold gold-text tracking-widest uppercase">An-Nuayeem</h1>
-        </div>
+    <header class="p-4 border-b border-gray-800 text-center">
+        <h1 class="text-2xl font-bold gold-text">AN-NUAYEEM</h1>
     </header>
 
-    <section class="py-10 px-4 text-center">
-        <h2 class="text-4xl font-bold mb-2 uppercase tracking-tight">Elegant <span class="gold-text">Panjabi</span></h2>
-        <p class="text-gray-400 text-sm">আভিজাত্য এবং আরামের সেরা কালেকশন</p>
-    </section>
-
-    <main id="product-grid" class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-        </main>
+    <main class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-4" id="grid"></main>
 
     <script>
-        const products = [
-            { id: 1, name: "এম্ব্রয়ডারি প্রিমিয়াম পাঞ্জাবি", price: "৯৯৯", oldPrice: "১,৪৯৯", discount: "-33%", img: "https://via.placeholder.com/400x533/1e293b/d4af37?text=An-Nuayeem+1" },
-            { id: 2, name: "রয়্যাল ব্ল্যাক পাঞ্জাবি", price: "১,২৯৯", oldPrice: "২,১৯৯", discount: "-40%", img: "https://via.placeholder.com/400x533/1e293b/d4af37?text=An-Nuayeem+2" },
-            // আপনি এখানে ২০টি পন্যের ডাটা দিতে পারেন
-        ];
-
-        // ফর লুপ দিয়ে ২০টি স্লট পূরণ করা (ডেমো হিসেবে একই ডাটা বারবার দেখানো হচ্ছে)
-        const grid = document.getElementById('product-grid');
-        for(let i=0; i<20; i++) {
-            const p = products[i % products.length];
+        const grid = document.getElementById('grid');
+        for(let i=1; i<=20; i++) {
             grid.innerHTML += `
-                <div onclick="location.href='detail.html?id=${i+1}'" class="product-card rounded-xl overflow-hidden flex flex-col">
-                    <div class="aspect-[3/4] bg-gray-900 relative">
-                        <img src="${p.img}" class="w-full h-full object-cover">
-                        <span class="absolute top-2 left-2 bg-red-600 text-[10px] px-2 py-1 rounded text-white font-bold">${p.discount}</span>
-                    </div>
-                    <div class="p-3">
-                        <h3 class="text-xs md:text-sm font-semibold text-gray-300 h-10 overflow-hidden">${p.name}</h3>
-                        <div class="mt-2 text-center">
-                            <span class="gold-text font-bold">৳ ${p.price}</span>
-                            <button class="w-full mt-3 py-2 bg-transparent border border-yellow-700 gold-text text-[10px] rounded uppercase font-bold">বিস্তারিত দেখুন</button>
-                        </div>
+                <div onclick="location.href='detail.html?id=${i}'" class="product-card rounded-lg overflow-hidden p-2">
+                    <img src="https://via.placeholder.com/400x500?text=Design+${i}" class="w-full h-auto rounded">
+                    <div class="p-2 text-center">
+                        <p class="text-sm font-semibold">Premium Design ${i}</p>
+                        <p class="gold-text">বিস্তারিত দেখুন</p>
                     </div>
                 </div>
             `;
