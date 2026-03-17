@@ -12,65 +12,77 @@
         .gold-bg { background-color: #d4af37; }
         .product-card { background: #161b2a; border: 1px solid #1e293b; transition: 0.3s; }
         .product-card:hover { border-color: #d4af37; transform: translateY(-5px); }
+        .badge { background: #d4af37; color: #000; font-size: 10px; font-weight: bold; padding: 2px 8px; border-radius: 4px; }
     </style>
 </head>
 <body>
 
     <header class="sticky top-0 z-50 bg-[#0b0f1a]/90 backdrop-blur-md border-b border-gray-800 p-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold gold-text tracking-tighter uppercase">An-Nuayeem</h1>
-            <nav class="hidden md:flex space-x-6 font-medium">
-                <a href="#" class="hover:gold-text">হোম</a>
-                <a href="#" class="hover:gold-text">পাঞ্জাবি</a>
-                <a href="#" class="hover:gold-text">যোগাযোগ</a>
-            </nav>
+            <h1 class="text-2xl font-bold gold-text tracking-widest uppercase">An-Nuayeem</h1>
             <div class="flex items-center gap-4">
-                <span class="text-sm border border-yellow-700 px-3 py-1 rounded-full gold-text">এলিগেন্ট কালেকশন</span>
+                <a href="https://wa.me/8801XXXXXXXXX" class="text-xs gold-bg text-black px-4 py-2 rounded-full font-bold">যোগাযোগ</a>
             </div>
         </div>
     </header>
 
-    <section class="py-12 px-4 text-center">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Elegant <span class="gold-text">Panjabi</span></h2>
-        <p class="text-gray-400">আভিজাত্য এবং আরামের এক অপূর্ব সমন্বয়</p>
+    <section class="py-10 px-4 text-center">
+        <h2 class="text-4xl font-bold mb-2 uppercase tracking-tight">Elegant <span class="gold-text">Panjabi</span></h2>
+        <p class="text-gray-400 text-sm">প্রিমিয়াম কোয়ালিটি ও আভিজাত্যের সেরা কালেকশন</p>
     </section>
 
-    <main class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+    <main class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
         
-        <div class="product-card rounded-xl overflow-hidden shadow-2xl">
-            <div class="aspect-square bg-gray-800 relative">
-                <img src="https://via.placeholder.com/400x500/1e293b/d4af37?text=Premium+Panjabi" alt="Panjabi" class="w-full h-full object-cover">
-                <span class="absolute top-2 left-2 bg-red-600 text-[10px] px-2 py-1 rounded text-white">-20% OFF</span>
-            </div>
-            <div class="p-4">
-                <h3 class="font-semibold text-sm md:text-base">এম্ব্রয়ডারি প্রিমিয়াম পাঞ্জাবি</h3>
-                <p class="gold-text font-bold my-1">৳ ১,৪৯০ <span class="text-gray-500 line-through text-xs font-normal">৳ ১,৮৫০</span></p>
-                <a href="https://wa.me/YOUR_NUMBER" class="block w-full text-center py-2 mt-3 gold-bg text-black text-sm font-bold rounded-lg hover:opacity-90">অর্ডার করুন</a>
-            </div>
-        </div>
+        <script>
+            const products = [
+                { name: "এম্ব্রয়ডারি পাঞ্জাবি (FP-2537)", price: "৯৯৯", oldPrice: "১,৪৯৯", discount: "-33%" },
+                { name: "রয়্যাল ব্ল্যাক পাঞ্জাবি", price: "১,২৯৯", oldPrice: "২,১৯৯", discount: "-40%" },
+                { name: "সাদা প্রিমিয়াম কটন", price: "১,১০০", oldPrice: "১,৬০০", discount: "-30%" },
+                { name: "ক্লাসিক নেভি ব্লু", price: "৯৫০", oldPrice: "১,৪০০", discount: "-32%" },
+                { name: "গোল্ডেন সিল্ক এডিশন", price: "২,৫০০", oldPrice: "৩,২০০", discount: "-22%" },
+                { name: "দীপাবলি স্পেশাল পাঞ্জাবি", price: "১,৮০০", oldPrice: "২,৫০০", discount: "-28%" },
+                { name: "অফ-হোয়াইট লিনেন", price: "১,২০০", oldPrice: "১,৭৫০", discount: "-31%" },
+                { name: "ডিজাইনার খাদি পাঞ্জাবি", price: "১,৪৫০", oldPrice: "২,০০০", discount: "-27%" },
+                { name: "বডর প্রিন্ট পাঞ্জাবি", price: "৯৯৯", oldPrice: "১,৩০০", discount: "-23%" },
+                { name: "এলিগেন্ট মেরুন পাঞ্জাবি", price: "১,৫০০", oldPrice: "২,১০০", discount: "-28%" },
+                { name: "সলিড কালার পাঞ্জাবি", price: "৮৫০", oldPrice: "১,২০০", discount: "-29%" },
+                { name: "পার্টি ওয়ের পাঞ্জাবি", price: "৩,০০০", oldPrice: "৪,৫০০", discount: "-33%" },
+                { name: "ক্যাজুয়াল কটন পাঞ্জাবি", price: "৭৯৯", oldPrice: "১,১০০", discount: "-27%" },
+                { name: "প্রিন্টেড প্রিমিয়াম কালেকশন", price: "১,৬৫০", oldPrice: "২,২০০", discount: "-25%" },
+                { name: "ম্যাট ফিনিশ পাঞ্জাবি", price: "১,২০০", oldPrice: "১,৭০০", discount: "-29%" },
+                { name: "এলিগেন্ট গ্রে পাঞ্জাবি", price: "১,৩৫০", oldPrice: "১,৯০০", discount: "-29%" },
+                { name: "বুটিক ডিজাইন পাঞ্জাবি", price: "২,২০০", oldPrice: "৩,০০০", discount: "-26%" },
+                { name: "সফট কটন পাঞ্জাবি", price: "৯০০", oldPrice: "১,৩০০", discount: "-30%" },
+                { name: "শাহি পাঞ্জাবি কালেকশন", price: "৪,৫০০", oldPrice: "৬,০০০", discount: "-25%" },
+                { name: "সিল্ক টাচ পাঞ্জাবি", price: "১,৯৯৯", oldPrice: "২,৮০০", discount: "-28%" }
+            ];
 
-        <div class="product-card rounded-xl overflow-hidden shadow-2xl">
-            <div class="aspect-square bg-gray-800 relative">
-                <img src="https://via.placeholder.com/400x500/1e293b/d4af37?text=Royal+Black" alt="Panjabi" class="w-full h-full object-cover">
-                <span class="absolute top-2 left-2 bg-red-600 text-[10px] px-2 py-1 rounded text-white">-15%</span>
-            </div>
-            <div class="p-4">
-                <h3 class="font-semibold text-sm md:text-base">রয়্যাল ব্ল্যাক কালেকশন</h3>
-                <p class="gold-text font-bold my-1">৳ ২,১৯০ <span class="text-gray-500 line-through text-xs font-normal">৳ ২,৫০০</span></p>
-                <a href="https://wa.me/YOUR_NUMBER" class="block w-full text-center py-2 mt-3 gold-bg text-black text-sm font-bold rounded-lg">অर्डर করুন</a>
-            </div>
-        </div>
+            const grid = document.querySelector('main');
+            products.forEach(p => {
+                grid.innerHTML += `
+                    <div class="product-card rounded-xl overflow-hidden flex flex-col">
+                        <div class="aspect-[3/4] bg-gray-900 relative">
+                            <img src="https://via.placeholder.com/400x533/1e293b/d4af37?text=An-Nuayeem" class="w-full h-full object-cover">
+                            <span class="absolute top-2 left-2 bg-red-600 text-[10px] px-2 py-1 rounded text-white font-bold">${p.discount}</span>
+                        </div>
+                        <div class="p-3 flex-grow">
+                            <h3 class="text-xs md:text-sm font-semibold text-gray-300 h-10 overflow-hidden">${p.name}</h3>
+                            <div class="mt-2">
+                                <span class="gold-text font-bold text-sm md:text-lg">৳ ${p.price}</span>
+                                <span class="text-gray-500 line-through text-[10px] ml-2 font-normal">৳ ${p.oldPrice}</span>
+                            </div>
+                            <button class="w-full mt-3 py-2 border border-yellow-700 text-[10px] md:text-xs gold-text font-bold rounded uppercase hover:bg-yellow-700 hover:text-black transition">অর্ডার করুন</button>
+                        </div>
+                    </div>
+                `;
+            });
+        </script>
 
-        </main>
+    </main>
 
-    <footer class="mt-20 py-12 border-t border-gray-800 text-center bg-[#080b14]">
-        <h2 class="gold-text text-xl font-bold mb-4 uppercase">An-Nuayeem</h2>
-        <p class="text-gray-500 text-sm">চাটগাঁর আভিজাত্য এখন আপনার হাতের মুঠোয়।</p>
-        <div class="mt-6 flex justify-center space-x-4">
-            <span class="text-xs text-gray-600">Facebook</span>
-            <span class="text-xs text-gray-600">Instagram</span>
-            <span class="text-xs text-gray-600">WhatsApp</span>
-        </div>
+    <footer class="mt-20 py-10 border-t border-gray-800 text-center">
+        <h2 class="gold-text text-xl font-bold uppercase tracking-widest">An-Nuayeem</h2>
+        <p class="text-gray-500 text-[10px] mt-2 tracking-widest uppercase">Luxury & Tradition | Chattogram, BD</p>
     </footer>
 
 </body>
