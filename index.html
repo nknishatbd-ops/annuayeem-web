@@ -43,25 +43,25 @@
     <script>
         // ২০টি পাঞ্জাবির তালিকা (এখানে নাম ও দাম detail.html এর সাথে মিল রাখা হয়েছে)
         const products = [
-            { id: 1, name: "এম্ব্রয়ডারি প্রিমিয়াম পাঞ্জাবি", price: "১,৪৯০", img: "https://via.placeholder.com/400x533/1e293b/d4af37?text=An-Nuayeem+1" },
-            { id: 2, name: "রয়্যাল ব্ল্যাক কালেকশন", price: "২,১৯০", img: "https://via.placeholder.com/400x533/000000/d4af37?text=An-Nuayeem+2" },
-            { id: 3, name: "সাদা প্রিমিয়াম কটন", price: "১,৫৫০", img: "https://via.placeholder.com/400x533/f8fafc/000000?text=An-Nuayeem+3" },
+            { id: 1, name: "এম্ব্রয়ডারি প্রিমিয়াম পাঞ্জাবি", price: "১,৪৯০", img: "https://i.postimg.cc/bw2qH7bJ/1774105457011.png" },
+            { id: 2, name: "রয়্যাল ব্ল্যাক কালেকশন", price: "২,১৯০", img: "https://i.postimg.cc/bw2qH7bJ/1774105457011.png" },
+            { id: 3, name: "সাদা প্রিমিয়াম কটন", price: "১,৫৫০", img: "https://i.postimg.cc/bw2qH7bJ/1774105457011.png" },
             { id: 4, name: "ক্লাসিক নেভি ব্লু ডিজাইন", price: "১,২৯০", img: "https://via.placeholder.com/400x533/000080/ffffff?text=An-Nuayeem+4" },
             { id: 5, name: "গোল্ডেন সিল্ক এডিশন", price: "৩,৫০০", img: "https://via.placeholder.com/400x533/d4af37/000000?text=An-Nuayeem+5" },
             { id: 6, name: "মেরুন লাক্সারি পাঞ্জাবি", price: "১,৮০০", img: "https://via.placeholder.com/400x533/800000/ffffff?text=An-Nuayeem+6" },
             { id: 7, name: "অফ-হোয়াইট লিনেন", price: "১,৪৫০", img: "https://via.placeholder.com/400x533/f5f5dc/000000?text=An-Nuayeem+7" },
-            { id: 8, name: "ডিজাইনার খাদি পাঞ্জাবি", price: "১,৭০০", img: "https://via.placeholder.com/400x533/c2b280/000000?text=An-Nuayeem+8" },
+            { id: 8, name: "ডিজাইনার খাদি পাঞ্জাবি", price: "১,৭৫০", img: "https://via.placeholder.com/400x533/c2b280/000000?text=An-Nuayeem+8" },
             { id: 9, name: "বর্ডার প্রিন্ট স্পেশাল", price: "১,২৫০", img: "https://via.placeholder.com/400x533/2f4f4f/ffffff?text=An-Nuayeem+9" },
-            { id: 10, name: "ম্যাট ফিনিশ পাঞ্জাবি", price: "১,৬০০", img: "https://via.placeholder.com/400x533/4b5320/ffffff?text=An-Nuayeem+10" },
+            { id: 10, name: "ম্যাট ফিনিশ পাঞ্জাবি", price: "১,৫৫০", img: "https://via.placeholder.com/400x533/4b5320/ffffff?text=An-Nuayeem+10" },
             { id: 11, name: "এলিগেন্ট গ্রে পাঞ্জাবি", price: "১,৪৯০", img: "https://via.placeholder.com/400x533/808080/ffffff?text=An-Nuayeem+11" },
-            { id: 12, name: "পার্টি ওয়ের গোল্ড", price: "৪,২০০", img: "https://via.placeholder.com/400x533/ffd700/000000?text=An-Nuayeem+12" },
+            { id: 12, name: "পার্টি ওয়ের গোল্ড", price: "৪,২৫০", img: "https://via.placeholder.com/400x533/ffd700/000000?text=An-Nuayeem+12" },
             { id: 13, name: "ক্যাজুয়াল কটন মিক্স", price: "৯৫০", img: "https://via.placeholder.com/400x533/696969/ffffff?text=An-Nuayeem+13" },
             { id: 14, name: "প্রিন্টেড নীল পাঞ্জাবি", price: "১,৮৫০", img: "https://via.placeholder.com/400x533/0000ff/ffffff?text=An-Nuayeem+14" },
-            { id: 15, name: "সফট সিল্ক কালেকশন", price: "২,৭০০", img: "https://via.placeholder.com/400x533/da70d6/ffffff?text=An-Nuayeem+15" },
-            { id: 16, name: "শাহি ভেলভেট পাঞ্জাবি", price: "৫,৫০০", img: "https://via.placeholder.com/400x533/4a0e0e/ffffff?text=An-Nuayeem+16" },
+            { id: 15, name: "সফট সিল্ক কালেকশন", price: "২,৭৫০", img: "https://via.placeholder.com/400x533/da70d6/ffffff?text=An-Nuayeem+15" },
+            { id: 16, name: "শাহি ভেলভেট পাঞ্জাবি", price: "৫,৫৫০", img: "https://via.placeholder.com/400x533/4a0e0e/ffffff?text=An-Nuayeem+16" },
             { id: 17, name: "বুটিক স্টাইল পাঞ্জাবি", price: "২,২৫০", img: "https://via.placeholder.com/400x533/ff69b4/ffffff?text=An-Nuayeem+17" },
             { id: 18, name: "সলিড মাস্টার্ড ডিজাইন", price: "১,৩৫০", img: "https://via.placeholder.com/400x533/ffdb58/000000?text=An-Nuayeem+18" },
-            { id: 19, name: "সিলভার টাচ পাঞ্জাবি", price: "২,৯০০", img: "https://via.placeholder.com/400x533/c0c0c0/000000?text=An-Nuayeem+19" },
+            { id: 19, name: "সিলভার টাচ পাঞ্জাবি", price: "২,৯৫০", img: "https://via.placeholder.com/400x533/c0c0c0/000000?text=An-Nuayeem+19" },
             { id: 20, name: "ব্ল্যাক এন্ড গোল্ড প্রিমিয়াম", price: "৪,০০০", img: "https://via.placeholder.com/400x533/1a1a1a/d4af37?text=An-Nuayeem+20" }
         ];
 
